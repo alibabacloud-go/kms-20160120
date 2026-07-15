@@ -3,6 +3,7 @@ package client
 
 import (
 	"context"
+
 	openapiutil "github.com/alibabacloud-go/darabonba-openapi/v2/utils"
 	"github.com/alibabacloud-go/tea/dara"
 )
@@ -1053,61 +1054,61 @@ func (client *Client) CreateSecretWithContext(ctx context.Context, tmpReq *Creat
 		request.ExtendedConfigShrink = openapiutil.ArrayToStringWithSpecifiedStyle(tmpReq.ExtendedConfig, dara.String("ExtendedConfig"), dara.String("json"))
 	}
 
-	query := map[string]interface{}{}
+	body := map[string]interface{}{}
 	if !dara.IsNil(request.DKMSInstanceId) {
-		query["DKMSInstanceId"] = request.DKMSInstanceId
+		body["DKMSInstanceId"] = request.DKMSInstanceId
 	}
 
 	if !dara.IsNil(request.Description) {
-		query["Description"] = request.Description
+		body["Description"] = request.Description
 	}
 
 	if !dara.IsNil(request.EnableAutomaticRotation) {
-		query["EnableAutomaticRotation"] = request.EnableAutomaticRotation
+		body["EnableAutomaticRotation"] = request.EnableAutomaticRotation
 	}
 
 	if !dara.IsNil(request.EncryptionKeyId) {
-		query["EncryptionKeyId"] = request.EncryptionKeyId
+		body["EncryptionKeyId"] = request.EncryptionKeyId
 	}
 
 	if !dara.IsNil(request.ExtendedConfigShrink) {
-		query["ExtendedConfig"] = request.ExtendedConfigShrink
+		body["ExtendedConfig"] = request.ExtendedConfigShrink
 	}
 
 	if !dara.IsNil(request.Policy) {
-		query["Policy"] = request.Policy
+		body["Policy"] = request.Policy
 	}
 
 	if !dara.IsNil(request.RotationInterval) {
-		query["RotationInterval"] = request.RotationInterval
+		body["RotationInterval"] = request.RotationInterval
 	}
 
 	if !dara.IsNil(request.SecretData) {
-		query["SecretData"] = request.SecretData
+		body["SecretData"] = request.SecretData
 	}
 
 	if !dara.IsNil(request.SecretDataType) {
-		query["SecretDataType"] = request.SecretDataType
+		body["SecretDataType"] = request.SecretDataType
 	}
 
 	if !dara.IsNil(request.SecretName) {
-		query["SecretName"] = request.SecretName
+		body["SecretName"] = request.SecretName
 	}
 
 	if !dara.IsNil(request.SecretType) {
-		query["SecretType"] = request.SecretType
+		body["SecretType"] = request.SecretType
 	}
 
 	if !dara.IsNil(request.Tags) {
-		query["Tags"] = request.Tags
+		body["Tags"] = request.Tags
 	}
 
 	if !dara.IsNil(request.VersionId) {
-		query["VersionId"] = request.VersionId
+		body["VersionId"] = request.VersionId
 	}
 
 	req := &openapiutil.OpenApiRequest{
-		Query: openapiutil.Query(query),
+		Body: body,
 	}
 	params := &openapiutil.Params{
 		Action:      dara.String("CreateSecret"),
@@ -3865,29 +3866,29 @@ func (client *Client) PutSecretValueWithContext(ctx context.Context, request *Pu
 			return _result, _err
 		}
 	}
-	query := map[string]interface{}{}
+	body := map[string]interface{}{}
 	if !dara.IsNil(request.SecretData) {
-		query["SecretData"] = request.SecretData
+		body["SecretData"] = request.SecretData
 	}
 
 	if !dara.IsNil(request.SecretDataType) {
-		query["SecretDataType"] = request.SecretDataType
+		body["SecretDataType"] = request.SecretDataType
 	}
 
 	if !dara.IsNil(request.SecretName) {
-		query["SecretName"] = request.SecretName
+		body["SecretName"] = request.SecretName
 	}
 
 	if !dara.IsNil(request.VersionId) {
-		query["VersionId"] = request.VersionId
+		body["VersionId"] = request.VersionId
 	}
 
 	if !dara.IsNil(request.VersionStages) {
-		query["VersionStages"] = request.VersionStages
+		body["VersionStages"] = request.VersionStages
 	}
 
 	req := &openapiutil.OpenApiRequest{
-		Query: openapiutil.Query(query),
+		Body: body,
 	}
 	params := &openapiutil.Params{
 		Action:      dara.String("PutSecretValue"),

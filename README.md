@@ -4,7 +4,7 @@ English | [简体中文](README-CN.md)
 # Alibaba Cloud Kms SDK for Go
 
 ## Requirements
-- It's necessary for you to make sure your system have installed Go environment which version greater than 1.12.0.
+- It's necessary for you to make sure your system have installed Go environment which version greater than 1.14.0.
 
 ## Installation
 If you use `go mod` to manage your dependence, you can use the following command:
